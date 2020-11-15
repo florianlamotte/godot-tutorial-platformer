@@ -1,7 +1,7 @@
 extends KinematicBody2D
 class_name Actor
 
-export var speed:= Vector2(1000, 200)
+export var speed:= Vector2(300, 200)
 
 # Actor mass between 0 and 1, 0 experience no gravity and 1 full gravity.
 const mass:= float(1.0)

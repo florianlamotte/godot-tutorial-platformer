@@ -4,6 +4,15 @@ const JUMP_DURATION_MAX:= 0.2 # In seconds
 
 var jump_duration:= 0.0
 
+
+func _on_EnemyDetector_area_entered(_area: Area2D) -> void:
+	_velocity.y = -1500
+
+
+func _on_EnemyDetector_body_entered(_body: Node) -> void:
+	queue_free()
+
+
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("player_menu"):
 		get_tree().quit()
