@@ -11,8 +11,11 @@ func _physics_process(_delta: float) -> void:
 	elif Input.is_action_pressed("player_move_right"):
 		directionX = 1.0
 	
+	var directionY = 0.0
+	if Input.is_action_just_pressed("player_move_up") and is_on_floor():
+		directionY = -1.0
+	
 	_direction = Vector2(
 		directionX,
-		0.0
+		directionY
 	)
-	
